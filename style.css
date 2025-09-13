@@ -20,5 +20,9 @@ body {
 .container div {
     width: 6.25%;
     height: 6.25%;
-
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
