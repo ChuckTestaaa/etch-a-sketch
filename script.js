@@ -17,17 +17,23 @@ function gridSize(size) {
 
 
 container.style.backgroundColor = 'antiquewhite';
-
 container.addEventListener('mouseover', (event) => {
     if (event.target.classList.contains('box')) {
-        event.target.style.backgroundColor = 'gray';
+        event.target.style.backgroundColor = getRandomRgbColor();
     }
 
 });
 
+function getRandomRgbColor() {
+    const r = Math.floor(Math.random() * 256); // Random red value (0-255)
+    const g = Math.floor(Math.random() * 256); // Random green value (0-255)
+    const b = Math.floor(Math.random() * 256); // Random blue value (0-255)
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
+
 let reset = document.querySelector('#reset');
-
-
 reset.addEventListener('click', resetGrid);
 
 function resetGrid() {
