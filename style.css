@@ -5,7 +5,22 @@ body {
     align-items: stretch;
     min-height: 100vh;
     margin: 0;
+    flex-direction: column;
 
+}
+
+.popup {
+
+    flex-basis: 50px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+
+}
+
+#reset {
+    flex-basis: 50px;
+    font-size: 50px;
 }
 
 .container {
@@ -13,13 +28,15 @@ body {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+
+    height: 100vw;
 }
 
 .container div {
-    width: 6.25%;
-    height: 6.25%;
+    width: calc(100% / 16);
+    aspect-ratio: 1 / 1;
+
+
     background: #eee;
     display: flex;
     justify-content: center;
